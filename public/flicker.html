@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Gray Level Pattern</title>
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web' rel='stylesheet' type='text/css'>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    height: 100%;
+    background-color: white;
+}
+canvas {
+  margin: 0;
+  padding: 0;
+}
+</style>
+<script type="text/javascript">
+function drawPattern() {
+    var c = document.getElementById("myCanvas");
+    // document.body.style.background = '#1f1f1f';
+
+    if (c && c.getContext) {
+        var ctx = c.getContext("2d");
+
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+
+        ctx.beginPath();
+        // http://www.rgraph.net/docs/howto-get-crisp-lines-with-no-antialias.html
+        ctx.translate(0.5, 0.5); // antialias
+        ctx.lineWidth = 1;
+        // ctx.strokeStyle = '#800080'
+        for (var i = 0; i <= c.width; i++) {
+            ctx.moveTo(i, 0);
+            ctx.lineTo(i, c.height);
+            if (i % 2 == 0) {
+                ctx.strokeStyle = '#800080'
+            } else {
+                ctx.strokeStyle = '#008000'
+            }
+            ctx.stroke();
+        }
+
+        // ctx.lineWidth = 1;
+        // ctx.strokeStyle = '#008000'
+        // for (var i = 1; i <= c.width; i +=2) {
+        //     ctx.moveTo(i, 0);
+        //     ctx.lineTo(i, c.height);
+        // }
+        // ctx.stroke();
+    }
+}
+</script>
+</head>
+<body onload="drawPattern();">
+  <canvas id="myCanvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Pattern</title>
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web' rel='stylesheet' type='text/css'>
+</head>
+<body onclick="setColor();">
+    <a href="color.html">Color Pattern</a><br/>
+    <a href="image.html">Image Pattern</a><br/>
+    <a href="graylevel.html">Gray Level Pattern</a></br>
+    <a href="imagestick1.html">ImageStick Pattern 1</a></br>
+    <a href="imagestick2.html">ImageStick Pattern 2</a></br>
+    <a href="xtalk1.html">XTalk Pattern 1</a></br>
+    <a href="xtalk2.html">XTalk Pattern 2</a></br>
+    <a href="flicker.html">Flicker Pattern</a></br>
+    <a href="canvas.html">Canvas</a></br>
+    <a href="navigation.html">Navigation</a></br>
+    <input type="button" value="Show Dialog" onclick="showDialog()"></br>
+</body>
+<script type="text/javascript">
+// to test ModalDialog
+function showDialog() {
+    var ret = showModalDialog("multiprompt.html", ["Enter 3D point coordinates", "x", "y", "z"],
+        "dialogwidth:400; dialogheight:300; resizable:yes");
+    alert(ret);
+}
+</script>
+</html>

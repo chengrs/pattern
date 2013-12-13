@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Gray Level Pattern</title>
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web' rel='stylesheet' type='text/css'>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    height: 100%;
+    background-color: white;
+}
+canvas {
+  margin: 0;
+  padding: 0;
+}
+</style>
+<script type="text/javascript">
+  function drawPattern() {
+      var c = document.getElementById("myCanvas");
+      document.body.style.background = '#7f7f7f';
+
+      if (c && c.getContext) {
+          var ctx = c.getContext("2d");
+
+          var recWidth = window.innerWidth / 4;
+          var recHeight = window.innerHeight / 4;
+
+          ctx.fillStyle = 'white';
+          ctx.fillRect(recWidth, recHeight, recWidth * 2, recHeight * 2);
+      }
+  }
+</script>
+</head>
+<body onload="drawPattern();">
+  <canvas id="myCanvas"></canvas>
+</body>
+</html>

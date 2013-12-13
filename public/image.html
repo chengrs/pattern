@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Image Pattern</title>
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web' rel='stylesheet' type='text/css'>
+<style>
+body {
+  /*background-image: url('./image/01.bmp');*/
+}
+</style>
+<script type="text/javascript">
+  var i = 0;
+  var images = ['./image/01.bmp', './image/02.bmp', './image/03.bmp'];
+  function setImage() {
+  	// seems no good, use batter method if any
+    document.body.style.backgroundImage = "url(" + images[i] + ")";
+    if (++i > 2) {
+      i = 0;
+    }
+  }
+  function switchImage() {
+    setInterval(function() {setImage();}, 3000);
+  }
+</script>
+</head>
+<body onload="switchImage();">
+</body>
+</html>
