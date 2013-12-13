@@ -5,9 +5,58 @@
 <head>
 <meta charset='utf-8'>
 <title>Pattern</title>
+<link rel="shortcut icon" href="/image/icons/ic_pattern.ico" >
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web' rel='stylesheet' type='text/css'>
+<style>
+    html body {
+        height: 100%;
+        margin 0;
+        padding: 0;
+        background: #888;
+    }
+
+    #content {
+        width: 308px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        /*border: 2px solid black; /* TODO remove it if not necessary */
+    }
+
+    .icon {
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    #power {
+        background: linear-gradient(top, rgba(255,255,0,1), rgba(255,255,0,.4));
+        background: -webkit-linear-gradient(top, rgba(255,255,0,1), rgba(255,255,0,.4));
+        background: -moz-linear-gradient(top, rgba(255,255,0,1), rgba(255,255,0,.4));
+    }
+
+    #optical {
+        background: white;
+    }
+
+    #image {
+        background: blue;
+        background: linear-gradient(top, rgba(0,0,255,1), rgba(0,0,255,.4));
+        background: -webkit-linear-gradient(top, rgba(0,0,255,1), rgba(0,0,255,.4));
+        background: -moz-linear-gradient(top, rgba(0,0,255,1), rgba(0,0,255,.4));
+    }
+</style>
 </head>
 <body onclick="setColor();">
+<div id="content">
+    <a href="color.html"><img class="icon" id="power" src="/image/icons/ic_power.png" alt="Power" title="Power" /></a>
+    <a href="imagestick1.html"><img class="icon" id="optical" src="/image/icons/ic_optical.png" alt="Optical" title="Optical" /></a>
+    <a href="image.html"><img class="icon" id="image" src="/image/icons/ic_image.png" alt="Image" title="Image" /></a>
+</div>
+<!--
     <a href="color.html">Color Pattern</a><br/>
     <a href="image.html">Image Pattern</a><br/>
     <a href="graylevel.html">Gray Level Pattern</a></br>
@@ -19,6 +68,7 @@
     <a href="canvas.html">Canvas</a></br>
     <a href="navigation.html">Navigation</a></br>
     <input type="button" value="Show Dialog" onclick="showDialog()"></br>
+-->
 </body>
 <script type="text/javascript">
 // to test ModalDialog
