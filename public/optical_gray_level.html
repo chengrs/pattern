@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Optical Gray Level Pattern</title>
+<link rel="shortcut icon" href="/image/icons/favicon.ico" >
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web' rel='stylesheet' type='text/css'>
+<style>
+html, body {
+  height: 100%;
+}
+</style>
+<script type="text/javascript">
+  var i = 0;
+  var colors = ['#1f1f1f', '#3f3f3f', '#5f5f5f', '#7f7f7f', '#9f9f9f'];
+
+  function setColor() {
+    document.body.style.background = colors[i];
+    if (++i > colors.length - 1) {
+      i = 0;
+    }
+  }
+</script>
+</head>
+<body onload="setColor();" onclick="setColor();">
+</body>
+</html>
