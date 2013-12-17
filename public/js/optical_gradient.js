@@ -1,6 +1,6 @@
 
 var i = 0;
-var gd = ['wv', 'wh', 'rv', 'rh', 'gv', 'gh'];
+var gd = ['wv', 'wh', 'rv', 'rh', 'gv', 'gh', 'bv', 'bh'];
 
 function draw() {
     var c = document.getElementById('myCanvas');
@@ -26,6 +26,9 @@ function draw() {
         break;
     case 'g':
         grd.addColorStop(0, 'green');
+        break;
+    case 'b':
+        grd.addColorStop(0, 'blue');
         break;
     case 'w':
     default:
