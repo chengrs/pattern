@@ -1,71 +1,17 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-<meta charset='utf-8'>
-<title>Optical Gray Level Pattern</title>
-<link rel="shortcut icon" href="/image/icons/favicon.ico" >
-<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web' rel='stylesheet' type='text/css'>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  height: 100%;
-}
-canvas {
-  margin: 0;
-  padding: 0;
-}
-</style>
-<script type="text/javascript">var i = 0;
-var gd = ['wv', 'wh', 'rv', 'rh', 'gv', 'gh'];
-
-function draw() {
-    var c = document.getElementById('myCanvas');
-    c.width = document.body.clientWidth; //document.width is obsolete
-    c.height = document.body.clientHeight; //document.height is obsolete
-    var ctx = c.getContext('2d');
-    ctx.fillStyle = '#FFFFFF';
-
-    // create gradient
-    switch (gd[i][1]) {
-    case 'h':
-        var grd = ctx.createLinearGradient(0, 0, c.width, 0);
-        break;
-    case 'v':
-    default:
-        var grd = ctx.createLinearGradient(0, 0, 0, c.height);
-        break;
-    }
-
-    switch (gd[i][0]) {
-    case 'r':
-        grd.addColorStop(0, 'red');
-        break;
-    case 'g':
-        grd.addColorStop(0, 'green');
-        break;
-    case 'w':
-    default:
-        grd.addColorStop(0, 'white');
-        break;
-    }
-
-    grd.addColorStop(1, 'black');
-
-    ctx.fillStyle = grd;
-    ctx.fillRect(0, 0, c.width, c.height);
-
-    if (++i > gd.length - 1) {
-        i = 0;
-    }
-}
-</script>
+    <meta charset='utf-8'>
+    <title>Optical Gradient Pattern</title>
+    <link rel="shortcut icon" href="/image/icons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/optical_gradient.css">
 </head>
-<body onload="draw();" onclick="draw();">
-  <canvas id="myCanvas">
-  </canvas>
+
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script type="text/javascript" src="/js/optical_gradient.js"></script>
 </body>
+
 </html>
